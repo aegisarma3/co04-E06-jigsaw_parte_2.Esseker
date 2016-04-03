@@ -8,7 +8,7 @@ class EditorData
 	toggles=66;
 	class ItemIDProvider
 	{
-		nextID=2087;
+		nextID=2088;
 	};
 	class MarkerIDProvider
 	{
@@ -21,9 +21,9 @@ class EditorData
 	class Camera
 	{
 		pos[]={4638.4932,165.16884,5890.3799};
-		dir[]={0.93458992,-0.30905375,-0.17626332};
-		up[]={0.30371141,0.95103991,-0.057280704};
-		aside[]={-0.1853366,-5.351103e-008,-0.9826954};
+		dir[]={-0.86673653,-0.25270474,-0.43005842};
+		up[]={-0.22638351,0.96753824,-0.11232628};
+		aside[]={-0.44448292,-8.411007e-008,0.89580965};
 	};
 };
 binarizationWanted=0;
@@ -60,6 +60,7 @@ addons[]=
 	"A3_Structures_F_Walls",
 	"A3_Structures_F_Mil_BagFence",
 	"A3_Structures_F_Civ_Lamps",
+	"A3_Characters_F_Gamma",
 	"A3_Structures_F_Furniture",
 	"A3_Soft_F_SUV",
 	"caf_ag_vehicles_bra_r",
@@ -71,10 +72,10 @@ class ScenarioData
 {
 	author="Collumbus & Toaster";
 	overviewText="Novas informações levam a PMC AEGIS a parte mais perigosa de Esseker.";
-	overViewPicture="images\intro4.jpg";
-	overViewPictureLocked="images\intro4.jpg";
+	overViewPicture="images\intro5.jpg";
+	overViewPictureLocked="images\intro5.jpg";
 	onLoadMission="Novas informações levam a PMC AEGIS a parte mais perigosa de Esseker.";
-	loadScreen="images\intro4.jpg";
+	loadScreen="images\intro5.jpg";
 	disabledAI=1;
 	respawn=1;
 	class Header
@@ -272,7 +273,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={4635.7969,148.59016,5904.5342};
-			angle=1.8920939;
+			angle=1.8920933;
 			class Attributes
 			{
 				condition="this AND !alive cell_leader;";
@@ -5714,9 +5715,10 @@ class Mission
 						position[]={11064.099,32.765919,5365.334};
 					};
 					side="East";
-					flags=3;
+					flags=2;
 					class Attributes
 					{
+						init="comment ""Exported from Arsenal by Toaster"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""TRYK_SUITS_BLK_F"";  for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";};  this addItemToUniform ""ACE_morphine"";  this addGoggles ""TRYK_Beard_BW4"";    comment ""Add weapons"";  this addWeapon ""sma_minimi_mk3_762tsb"";  this addWeapon ""hgun_ACPC2_F"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadio"";    comment ""Set identity"";  this setFace ""PersianHead_A3_01"";  this setSpeaker ""ACE_NoVoice"";  ";
 						name="cell_leader";
 						class Inventory
 						{
@@ -5741,8 +5743,8 @@ class Mission
 							goggles="TRYK_Beard_BW4";
 						};
 					};
-					id=2011;
-					type="CAF_AG_BRA_R_OFFICER";
+					id=2087;
+					type="O_Story_Colonel_F";
 					class CustomAttributes
 					{
 						class Attribute0
